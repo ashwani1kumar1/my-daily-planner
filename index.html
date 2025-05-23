@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Daily Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Daily Planner</h1>
+  </header>
+
+  <main role="main" aria-label="Daily task planner" class="container">
+    <form id="add-task-form" aria-label="Add new task form">
+      <input type="text" id="new-task-input" placeholder="Add a new task" aria-label="New task description" autocomplete="off" required />
+      <select id="task-category" aria-label="Task category">
+        <option value="Personal" selected>Personal</option>
+        <option value="Work">Work</option>
+        <option value="Study">Study</option>
+      </select>
+      <button type="submit" id="add-task-button" aria-label="Add task button" disabled>Add</button>
+    </form>
+
+    <input type="search" id="search-bar" placeholder="Search tasks..." aria-label="Search tasks" autocomplete="off" />
+
+    <ul id="task-list" aria-live="polite" aria-relevant="additions removals"></ul>
+
+    <button id="clear-all-btn" aria-label="Clear all tasks" disabled>Clear All Tasks</button>
+  </main>
+
+  <button id="back-to-top" aria-label="Back to top" title="Back to top" style="display:none;">↑</button>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>
+
+
